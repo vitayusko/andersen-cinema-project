@@ -1,0 +1,44 @@
+.hero {
+  min-height: 900px;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroTitle {
+}
+
+.heroDescription {
+}
+
+.heroButton {
+}
+
+.categories {
+  padding: 120px 0;
+}
+
+.sectionHeader {
+  margin-bottom: 60px;
+}
+
+.categoriesGrid {
+  display: grid;
+}
+
+.categoryCard {
+}
+
+.popularMovies {
+  padding: 120px 0;
+}
+
+.topRatedMovies {
+  padding: 120px 0;
+}
+
+.moviesGrid {
+}

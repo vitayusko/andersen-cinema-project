@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+  max-width: 1596px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* tablet */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 100%;
+    padding: 0 24px;
+  }
+}
+
+/* mobile */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 16px;
+  }
+}
