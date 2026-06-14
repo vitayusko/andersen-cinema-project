@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { MainLayout } from "../layouts/MainLayout";
-import { HomePage } from "../pages/HomePage/HomePage";
-import { MoviesPage } from "../pages/MoviesPage/MoviesPage";
+// import { HomePage } from "../pages/HomePage/HomePage";
+// import { MoviesPage } from "../pages/MoviesPage/MoviesPage";
 import { Suspense, lazy } from "react";
 
 const HomePage = lazy(() => import('../pages/HomePage/HomePage').then(module => ({ default: module.HomePage })));
