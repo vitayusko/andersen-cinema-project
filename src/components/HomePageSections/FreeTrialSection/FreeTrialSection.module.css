@@ -1,0 +1,44 @@
+.freeTrialSection {
+   margin-bottom: 120px;
+}
+.freeTrialContentText {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.freeTrialContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 80px 60px;
+    border: 1px solid #262626;
+    border-radius: 10px;
+
+    background-image: url('../../../assets/images/homePage/freeTrialImg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.freeTrialHeading {
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+}
+
+.freeTrialDescription {
+    color: #999999;
+    font-weight: 200;
+    width: 1129px;
+}
+
+.freeTrialButton {
+    background-color: #E50000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 14px 20px;
+    cursor: pointer;
+    font-weight: semibold;
+}
