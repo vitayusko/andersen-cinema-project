@@ -2,6 +2,9 @@ import { useEffect } from 'react';
 
 import { fetchMovies } from '../../redux/movies/moviesThunks';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
+import { MovieCard } from '../../components/MovieCard/MovieCard';
+import styles from './MoviesPage.module.css';
+import { Container } from '../../components/Container/Container';
 
 export const MoviesPage = () => {
   const dispatch = useAppDispatch();
@@ -25,14 +28,14 @@ export const MoviesPage = () => {
 console.log('movies state:', moviesState);
 
   return (
-    <div>
+    <Container>
+    <div className={styles.container}>
       <h1>Movies Page</h1>
-      <ul>
+      <ul className={styles.list}>
         {movies.map ((movie) => (
-            <li key={movie.id}>{movie.title}</li>
+            <MovieCard key={movie.id} movie={movie} />
         ))}
-       
       </ul>
-    </div>
+    </div></Container>
   );
 };
