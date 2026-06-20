@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { MainLayout } from "../layouts/MainLayout";
+import { MainLayout } from "../components/MainLayout/MainLayout";
 // import { HomePage } from "../pages/HomePage/HomePage";
 // import { MoviesPage } from "../pages/MoviesPage/MoviesPage";
 import { Suspense, lazy } from "react";

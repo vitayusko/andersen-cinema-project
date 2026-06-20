@@ -1,6 +1,5 @@
 import styles from './Hero.module.css';
-import heroImg from '../../../assets/images/homePage/heroImg.png';
-
+import heroImg from '../../../../assets/images/homePage/heroImg.png';
 export function Hero() {
   return (
     <section

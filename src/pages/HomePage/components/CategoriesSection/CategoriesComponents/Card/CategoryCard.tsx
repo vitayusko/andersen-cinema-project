@@ -1,22 +1,23 @@
-import type { Category } from '../../../../../constants/CategoriesSection/categories';
 
 import styles from './CategoryCard.module.css';
 
-type CategoryCardProps = {
-  category: Category;
-};
+interface CategoryCardProps {
+  title: string;
+  images: string[];
+}
 
 export const CategoryCard = ({
-  category,
+   title,
+  images,
 }: CategoryCardProps) => {
   return (
     <div className={styles.card}>
       <div className={styles.imagesWrapper}>
-        {category.images.map((images) => (
+        {images.map((image) => (
           <img
-            key={images}
-            src={images}
-            alt={category.title}
+            key={image}
+            src={image}
+            alt={title}
             className={styles.image}
           />
         ))}
@@ -24,7 +25,7 @@ export const CategoryCard = ({
 
       <div className={styles.footer}>
         <span className={styles.title}> 
-          {category.title}
+          {title}
         </span>
 
         <button
