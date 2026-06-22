@@ -1,5 +1,4 @@
-import { Container } from '../../Container/Container';
-import styles from './Categories.module.css';
+import { Container } from '../../../../components/Container/Container';import styles from './Categories.module.css';
 import { CategoriesList } from './CategoriesComponents/List/CategoriesList';
 
 export function Categories() {

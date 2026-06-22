@@ -1,8 +1,7 @@
-import { Hero } from '../../components/HomePageSections/Hero/Hero';
-import { Categories } from '../../components/HomePageSections/CategoriesSection/Categories';
-import { DevicesSection } from '../../components/HomePageSections/DevicesSection/DevicesSection';
-import { FreeTrialSection } from '../../components/HomePageSections/FreeTrialSection/FreeTrialSection';
-
+import { Hero } from "./components/Hero/Hero";
+import { Categories } from "./components/CategoriesSection/Categories";
+import { DevicesSection } from "./components/DevicesSection/DevicesSection";
+import { FreeTrialSection } from "./components/FreeTrialSection/FreeTrialSection";
 export function HomePage() {
   return (
     <>

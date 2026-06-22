@@ -1,5 +1,4 @@
-import { categories } from '../../../../../constants/CategoriesSection/categories';
-
+import { categories } from '../../../../../../constants/CategoriesSection/categories';
 import { CategoryCard } from '../Card/CategoryCard';
 
 import styles from '../List/CategoriesList.module.css';
@@ -12,7 +11,8 @@ export function CategoriesList() {
           key={category.id}
           className={styles.categoryItem}
         >
-          <CategoryCard category={category} />
+          <CategoryCard title={category.title}
+  images={category.images} />
         </li>
       ))}
     </ul>

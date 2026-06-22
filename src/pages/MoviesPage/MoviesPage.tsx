@@ -2,17 +2,15 @@ import { useEffect } from 'react';
 
 import { fetchMovies } from '../../redux/movies/moviesThunks';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
-import { MovieCard } from '../../components/MovieCard/MovieCard';
+import { MovieCard } from './MovieCard/MovieCard';
 import styles from './MoviesPage.module.css';
 import { Container } from '../../components/Container/Container';
 
 export const MoviesPage = () => {
   const dispatch = useAppDispatch();
-  const movies = useAppSelector ((state) => state.movies.items);
-    const { items, loading, error } = useAppSelector(
-    (state) => state.movies
+   const { items: movies, loading, error } = useAppSelector(
+    (state) => state.movies,
   );
-  const moviesState = useAppSelector((state) => state.movies);
 
   useEffect(() => {
     dispatch(fetchMovies(1));
@@ -25,7 +23,6 @@ export const MoviesPage = () => {
     return <div>Error: {error}</div>;
   }
    
-console.log('movies state:', moviesState);
 
   return (
     <Container>
@@ -33,7 +30,11 @@ console.log('movies state:', moviesState);
       <h1>Movies Page</h1>
       <ul className={styles.list}>
         {movies.map ((movie) => (
-            <MovieCard key={movie.id} movie={movie} />
+            <MovieCard key={movie.id} 
+            title={movie.title}
+  posterPath={movie.poster_path}
+  releaseDate={movie.release_date}
+  voteAverage={movie.vote_average} />
         ))}
       </ul>
     </div></Container>

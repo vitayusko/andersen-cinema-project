@@ -1,8 +1,7 @@
-import { Container } from '../../Container/Container';
+import { Container } from "../../../../components/Container/Container";
 import { Card } from './DeviceSectionComponents/Card/Card';
 import styles from './DevicesSection.module.css';
-import { categories } from '../../../constants/DeviceSection/categories';
-
+import { categories } from '../../../../constants/DeviceSection/categories';
 export function DevicesSection() {
   return (
     <Container>
@@ -13,7 +12,11 @@ export function DevicesSection() {
     </div>
     <div className={styles.devicesSectionCardWrapper}>
          {categories.map((category) => (
-            <Card key={category.id} category={category} />
+            <Card  
+            key={category.id}
+  icon={category.icon}
+  title={category.title}
+  description={category.description} />
           ))}
     </div>
     </section>
