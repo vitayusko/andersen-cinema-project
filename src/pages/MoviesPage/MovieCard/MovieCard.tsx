@@ -1,33 +1,35 @@
-import type { Movie } from '../../types/movie';
 import styles from './MovieCard.module.css';
 
-type MovieCardProps = {
-  movie: Movie
-};
+interface MovieCardProps {
+  title: string;
+  posterPath: string;
+  releaseDate: string;
+  voteAverage: number;
+}
 
-export function MovieCard({movie}: MovieCardProps) {
+export function MovieCard({title, posterPath, releaseDate, voteAverage}: MovieCardProps) {
 
-    const imageUrl = `${import.meta.env.VITE_TMDB_IMAGE_URL}${movie.poster_path}`;
+    const imageUrl = `${import.meta.env.VITE_TMDB_IMAGE_URL}${posterPath}`;
   return (
      <div className={styles.card}>
       <img
         src={imageUrl}
-        alt={movie.title}
+        alt={title}
         className={styles.poster}
       />
 
       <div className={styles.footer}>
         <h3 className={styles.title}>
-          {movie.title}
+          {title}
         </h3>
 
         <div className={styles.info}>
           <span className={styles.rating}>
-            ⭐ {movie.vote_average.toFixed(1)}
+            ⭐ {voteAverage.toFixed(1)}
           </span>
 
           <span className={styles.year}>
-            {movie.release_date.slice(0, 4)}
+            {releaseDate.slice(0, 4)}
           </span>
         </div>
       </div>
