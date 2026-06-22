@@ -1,0 +1,37 @@
+.card {
+  padding: 16px;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  background: #1a1a1a;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.poster {
+  width: 319px;
+  height: 348px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.footer {
+  margin-top: 14px;
+}
+
+.title {
+  margin: 0 0 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  color: #999999;
+  font-size: 14px;
+}
