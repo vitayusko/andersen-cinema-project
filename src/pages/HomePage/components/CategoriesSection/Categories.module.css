@@ -1,0 +1,44 @@
+.playIconLeft {
+    stroke: white;
+            width: 28px;
+            height: 28px;rotate: 180deg;
+}
+.playIconRight {
+    stroke: white;
+    width: 28px;
+    height: 28px;
+    
+}
+.categories {
+    padding-top: 200px;
+    padding-bottom: 150px;
+   
+}
+
+.scrollWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.titleWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 1240px;
+}
+
+.categoriesList {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}

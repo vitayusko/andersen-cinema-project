@@ -1,0 +1,27 @@
+.devicesSectionTextWrapper {
+display: flex;
+flex-direction: column;
+gap: 10px;
+margin-bottom: 60px;
+}
+
+.devicesSectionH {
+    font-weight: bold;
+    color: white;
+}
+
+.devicesSectionP {
+    color: #999999;
+    font-weight: 200;
+    width: 1129px;
+}
+
+.devicesSectionCardWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.devicesSection {
+    margin-bottom: 120px;
+}

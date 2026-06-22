@@ -1,0 +1,21 @@
+.cardWrapper {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #0F0F0F;
+  border: 1px solid #262626;
+  border-radius: 10px;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  fill: red
+}
+
+.iconTextWrapper {
+   display: flex;
+   flex-direction: row;
+   gap: 25px;
+}
