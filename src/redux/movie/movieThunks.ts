@@ -2,6 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 import { getMovie } from '../../api/moviesApi';
 import type { Movie } from '../../types/movie';
+import { getMovieCast } from '../../api/moviesApi';
 
 export const fetchMovieById = createAsyncThunk<
 Movie,
@@ -17,3 +18,11 @@ number,
         }
     }
 ) 
+
+
+export const fetchMovieCast = createAsyncThunk (
+    'movie/fetchMovieCast',
+    async (movieId: number) => {
+        return await getMovieCast(movieId)
+    }
+)

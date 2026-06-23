@@ -15,7 +15,7 @@
     border: 1px solid #262626;
     border-radius: 10px;
 
-    background-image: url('../../../assets/images/homePage/freeTrialImg.png');
+    background-image: url('./../../../../assets/images/homePage/freeTrialImg.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

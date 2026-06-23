@@ -3,6 +3,8 @@ import { Hero } from "./MovieDetailsPageSections/Hero/Hero";
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import { fetchMovieById } from "../../redux/movie/movieThunks";
 import { useEffect } from "react";
+import { Cast } from "./MovieDetailsPageSections/Cast/Cast";
+import { fetchMovieCast } from "../../redux/movie/movieThunks";
 
 
 
@@ -11,12 +13,13 @@ export function MovieDetailsPage() {
 
   const {id} = useParams();
   const dispatch = useAppDispatch();
-  const {movie, loading, error} = useAppSelector(
+  const {movie, cast, loading, error} = useAppSelector(
     (state) => state.movie,
   )
   useEffect(() => {
     if (id) {
       dispatch(fetchMovieById (Number(id)));
+      dispatch(fetchMovieCast(Number(id)));
     }
   }, [dispatch, id]);
   if (loading) {
@@ -31,13 +34,14 @@ export function MovieDetailsPage() {
   
   return (
     <div>
-      <h1>Movie Details</h1>
+      
       <div>
         <Hero
           title={movie.title}
           overview={movie.overview}
           poster_path={movie.poster_path}
         />
+        <Cast cast={cast}/>
       </div>
     </div>
   );

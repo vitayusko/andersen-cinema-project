@@ -19,3 +19,13 @@ export const getMovie = async (movieId: number) => {
 
   return response.data;
 };
+
+export const getMovieCast = async (movieId: number) => {
+  const response = await api.get(`/movie/${movieId}/credits`, {
+    params: {
+      api_key: import.meta.env.VITE_TMDB_API_KEY,
+    },
+  });
+
+  return response.data.cast;
+};

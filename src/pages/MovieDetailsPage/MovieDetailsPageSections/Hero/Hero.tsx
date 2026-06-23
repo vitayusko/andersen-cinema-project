@@ -18,14 +18,41 @@ export function Hero ({
 return (
   <Container>
     <div className={styles.heroWrapper}>
-      <h1 className={styles.h1}>{title}</h1>
-      <p className={styles.p}>{overview}</p>
-      <img
-        src={imageUrl}
-        alt={title}
-        className={styles.img}
-      />
+  <img
+    src={imageUrl}
+    alt={title}
+    className={styles.img}
+  />
+
+  <div className={styles.overlay}>
+    <h1 className={styles.h1}>
+      {title}
+    </h1>
+
+    <p className={styles.p}>
+      {overview}
+    </p>
+
+    <div className={styles.actions}>
+      <button className={styles.playButton}>
+        <svg className={styles.playIcon}>
+    <use href="/symbol.svg#icon-play" />
+  </svg> Play Now
+      </button>
+
+      <button  className={styles.actionsBtn}>
+        <svg className={styles.actionIcon}>
+    <use href="/symbol-hero-movie.svg#icon-untitled" />
+  </svg></button>
+      <button className={styles.actionsBtn}><svg className={styles.actionIcon}>
+    <use href="/symbol-hero-movie.svg#icon-woice" />
+  </svg></button>
+      {/* <button className={styles.actionsBtn}><button className={styles.actionsBtn}><svg className={styles.actionIcon}>
+    <use href="/symbol-hero-movie.svg#icon-ok" />
+  </svg></button></button> */}
     </div>
+  </div>
+</div>
   </Container>
 );
 }
