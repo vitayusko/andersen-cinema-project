@@ -11,6 +11,7 @@ import { fetchMovieCast } from "../../redux/movie/movieThunks";
 // Redux useParams, useDispatch, useSelector забираем сюда все данные с редакса и передаем на чилдренов
 export function MovieDetailsPage() {
 
+
   const {id} = useParams();
   const dispatch = useAppDispatch();
   const {movie, cast, loading, error} = useAppSelector(
@@ -33,7 +34,7 @@ export function MovieDetailsPage() {
   }
   
   return (
-    <div>
+   
       
       <div>
         <Hero
@@ -43,6 +44,6 @@ export function MovieDetailsPage() {
         />
         <Cast cast={cast}/>
       </div>
-    </div>
+   
   );
 }
