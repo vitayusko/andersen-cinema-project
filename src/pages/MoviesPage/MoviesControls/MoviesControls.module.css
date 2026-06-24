@@ -1,0 +1,63 @@
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 40px;
+}
+
+.input {
+  width: 400px;
+  height: 56px;
+
+  padding: 0 20px;
+
+  border: 1px solid #262626;
+  border-radius: 12px;
+
+  background-color: #141414;
+
+  color: #ffffff;
+  font-size: 16px;
+
+  outline: none;
+
+  transition: border-color 0.2s ease;
+}
+
+.input::placeholder {
+  color: #999999;
+}
+
+.input:focus {
+  border-color: #e50000;
+}
+
+.select {
+  width: 180px;
+  height: 56px;
+
+  padding: 0 16px;
+
+  border: 1px solid #262626;
+  border-radius: 12px;
+
+  background-color: #141414;
+
+  color: #ffffff;
+  font-size: 16px;
+
+  cursor: pointer;
+  outline: none;
+
+  transition: border-color 0.2s ease;
+}
+
+.select:focus {
+  border-color: #e50000;
+}
+
+.select option {
+  background-color: #141414;
+  color: #ffffff;
+}

@@ -8,3 +8,29 @@
     margin-top: 160px;
 
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  margin-top: 40px;
+}
+
+.pagination button {
+  padding: 14px 24px;
+
+  border: 1px solid #262626;
+  border-radius: 8px;
+
+  background: #1a1a1a;
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
