@@ -1,20 +1,27 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
 interface FiltersState {
-    genre: string[];
-    year: number | null;
-    rating: number | null;
+    searchValue: string;
+    sortBy: 'title' | 'rating' | 'year';
 }
 
 const initialState: FiltersState = {
-    genre: [],
-    year: null,
-    rating: null,
+     searchValue: '',
+    sortBy: 'title'
 }
 
-const filterSlice = createSlice ({
+const filtersSlice = createSlice ({
     name: 'filters',
     initialState,
-    reducers: {}
+    reducers: {
+        setSearchValue: ( state, action: PayloadAction<string>) => {
+            state.searchValue = action.payload;
+        },
+        setSortBy: (state, action: PayloadAction<FiltersState['sortBy']>) => {
+            state.sortBy = action.payload;
+        }
+    }
 })
-export default filterSlice.reducer;
+
+export const { setSearchValue, setSortBy} = filtersSlice.actions;
+export default filtersSlice.reducer;
