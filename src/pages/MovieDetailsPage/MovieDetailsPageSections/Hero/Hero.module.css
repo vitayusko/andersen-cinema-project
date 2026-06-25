@@ -1,0 +1,91 @@
+
+
+.heroWrapper {
+margin-top: 170px;
+  position: relative;
+  width: 100%;
+  height: 835px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.heroWrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(20, 20, 20, 1) 0%,
+      rgba(20, 20, 20, 0.8) 20%,
+      rgba(20, 20, 20, 0) 60%
+    );
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  left: 50%;
+  bottom: 60px;
+  transform: translateX(-50%);
+  width: 80%;
+  z-index: 2;
+  text-align: center;
+}
+
+.h1 {
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.p {
+  max-width: 1200px;
+  margin: 0 auto 24px;
+  color: #999;
+  font-size: 16px;
+}
+
+.playButton {
+    display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background-color: #e50914;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 18px 24px;
+}
+
+.playIcon {
+    height: 24px;
+    width: 24px;
+    fill: #fff;
+}
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.actionsBtn {
+    padding: 14px;
+    background-color: #000000;
+    border-radius: 10px;
+    border: 1px solid #262626;
+}
+.actionIcon {
+    height: 28px;
+    width: 28px;
+    fill: #fff;
+}

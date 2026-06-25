@@ -1,16 +1,21 @@
 import styles from './MovieCard.module.css';
+import { Link } from 'react-router-dom';
 
 interface MovieCardProps {
   title: string;
+  id: number;
   posterPath: string;
   releaseDate: string;
   voteAverage: number;
 }
 
-export function MovieCard({title, posterPath, releaseDate, voteAverage}: MovieCardProps) {
+export function MovieCard({title, id, posterPath, releaseDate, voteAverage}: MovieCardProps) {
 
     const imageUrl = `${import.meta.env.VITE_TMDB_IMAGE_URL}${posterPath}`;
   return (
+    <Link
+  to = {`/movies/${id}`}
+  className={styles.link}>
      <div className={styles.card}>
       <img
         src={imageUrl}
@@ -34,5 +39,6 @@ export function MovieCard({title, posterPath, releaseDate, voteAverage}: MovieCa
         </div>
       </div>
     </div>
+    </Link>
   );
 }
